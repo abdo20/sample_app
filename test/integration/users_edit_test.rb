@@ -16,5 +16,11 @@ class UsersEditTest < ActionDispatch::IntegrationTest
   		email: "foo@invalid", password: "foo", password_confirmation: "bar"
   		}}
   	assert_template 'users/edit'
+
+  	assert_select "div.alert" do
+  		assert_select "ul" do
+  			assert_select "li", 4
+  		end
+  	end
   end
 end
