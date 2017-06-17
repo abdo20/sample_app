@@ -38,6 +38,9 @@ gem 'jbuilder', '~> 2.5'
  gem 'will_paginate'
  gem 'bootstrap-will_paginate'
 
+ gem 'pry-rails'
+
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
