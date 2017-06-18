@@ -68,6 +68,12 @@ class User < ApplicationRecord
 		reset_sent_at < 2.hours.ago
 	end
 
+	# reset the reset digest to nil
+	def expire_password_reset_token
+		update_attribute :reset_digest, nil
+	end
+
+
 	private
 
 	# Convert email to all lower-case.
